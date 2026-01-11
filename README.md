@@ -16,7 +16,6 @@ This project showcases:
 - ✅ **CI/CD Pipeline** - Automated builds using GitHub Actions
 - ✅ **Container Registry** - Images published to GitHub Container Registry (GHCR)
 - ✅ **Development Workflow** - Easy local development with Docker
-- ✅ **Production Ready** - Optimized images using Alpine Linux
 
 ---
 
@@ -26,7 +25,6 @@ This project showcases:
 - **Docker** - Containerization platform
 - **GitHub Actions** - CI/CD automation
 - **GHCR** - Container image registry
-- **Alpine Linux** - Lightweight base image
 
 ---
 
@@ -51,3 +49,6 @@ docker run -d -p 3000:3000 --name todo-app ghcr.io/ahmedelbaiomy/todo-docker-pip
 
 # Access the application
 # Open your browser: http://localhost:3000
+
+
+
