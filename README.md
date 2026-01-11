@@ -50,5 +50,80 @@ docker run -d -p 3000:3000 --name todo-app ghcr.io/ahmedelbaiomy/todo-docker-pip
 # Access the application
 # Open your browser: http://localhost:3000
 
+```
+### Option 1: Run Pre-built Image (Fastest)
+
+Pull and run the latest image from GitHub Container Registry:
+```bash
+# Clone the repository
+git clone https://github.com/ahmedelbaiomy/todo-docker-pipeline.git
+cd todo-docker-pipeline
+
+# Build the Docker image
+docker build -t todo-app .
+
+# Run the container
+docker run -d -p 3000:3000 --name todo-app todo-app
+
+# Access the application
+# Open your browser: http://localhost:3000
+
+```
+
+```markdown
+---
+
+## 🔄 CI/CD Pipeline
+
+This project uses **GitHub Actions** to automate the build and deployment process.
+
+### How It Works
+Code Push → GitHub Actions → Build Image → Push to GHCR → Ready to Deploy
 
 
+### Pipeline Triggers
+
+- ✅ Push to `master` branch
+- ✅ Pull requests to `master`
+
+### What Happens Automatically
+
+1. Checks out code from repository
+2. Builds Docker image
+3. Logs in to GitHub Container Registry
+4. Tags image with `latest` and commit SHA
+5. Pushes image to GHCR
+
+[View Pipeline Status →](https://github.com/ahmedelbaiomy/todo-docker-pipeline/actions)
+
+```
+
+## 🧪 Development Mode
+
+Run the application with live code reload:
+
+```bash
+# For Linux/macOS
+docker run -it \
+  -p 3000:3000 \
+  -v $(pwd):/app \
+  -v node_modules:/app/node_modules \
+  -w /app \
+  node:18-alpine sh
+
+# For Windows PowerShell
+docker run -it `
+  -p 3000:3000 `
+  -v ${PWD}:/app `
+  -v node_modules:/app/node_modules `
+  -w /app `
+  node:18-alpine sh
+
+  ```
+
+  ```bash 
+  npm install
+  npm run dev
+  ```
+
+  
