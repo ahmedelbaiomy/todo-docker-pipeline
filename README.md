@@ -36,9 +36,9 @@ This project showcases:
 
 ---
 
-### Option 1: Run Pre-built Image (Fastest)
+### Option 2: Build from Source
 
-Pull and run the latest image from GitHub Container Registry:
+Clone and build the image yourself:
 
 ```bash
 # Pull the image
